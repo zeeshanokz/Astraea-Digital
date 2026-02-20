@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Vision | Astraea Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">ASTRAEA</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Agency</a>
+                <a href="contact.html">Work With Us</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Hire Us</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="padding-top: 12rem;">
+            <div class="container">
+                <div class="reveal">
+                    <h1 style="font-size: 3.5rem; margin-bottom: 2rem;">A Legacy of <br>Future Thinking.</h1>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem;">
+                        <p style="font-size: 1.25rem; color: var(--text-muted);">Astraea was founded on the belief that
+                            digital interfaces should be more than just functional—they should be evocative. We work
+                            with visionaries to redefine the boundaries of what's possible online.</p>
+                        <div>
+                            <h3 style="margin-bottom: 1rem; color: var(--primary);">01. Discovery</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 2rem;">We dive deep into your brand DNA
+                                to uncover the core triggers of your audience.</p>
+                            <h3 style="margin-bottom: 1rem; color: var(--primary);">02. Execution</h3>
+                            <p style="color: var(--text-muted);">Precision-engineered design and code that performs as
+                                well as it looks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section glass" style="margin: 0 2rem 4rem; border-radius: 2rem;">
+            <div class="container">
+                <div class="reveal" style="text-align: center;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to build the future?</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem;">Join the ranks of companies that are
+                        setting the standard.</p>
+                    <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">ASTRAEA</div>
+                    <p style="color: var(--text-muted);">Innovating at the intersection of design and future tech.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Agency</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </div>
+                <div class="footer-links">
+                    <h4>Social</h4>
+                    <li><a href="#">Dribbble</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Astraea Digital. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
